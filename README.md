@@ -7,19 +7,21 @@ testing foundry/forge loading bash env vars into script using environment cheats
 The following script will:
 
 1. load the env vars in [`.env.local`](./.env.local)
-1. echo the bash env var `$STRING_ENV_VAR` (to prove that it is loaded)
+1. echo the bash env vars (to prove that they are loaded)
 1. run the forge script
 
 ```sh
-$ source .env.local && echo $STRING_ENV_VAR && forge script script/Contract.s.sol -vvvvv
+$ source .env.local && echo $BOOL_ENV_VAR && echo $BOOL_ENV_VAR_2 && echo $STRING_ENV_VAR && forge script script/Contract.s.sol -vvvvv
 ```
 
 ## ⚠️ This is what I am getting when I run the script:
 
 ```sh
-➜  env-vars-in-script git:(main) source .env.local && echo $STRING_ENV_VAR && forge script script/Contract.s.sol -vvvvv
+➜  env-vars-in-script git:(main) source .env.local && echo $BOOL_ENV_VAR && echo $BOOL_ENV_VAR_2 && echo $STRING_ENV_VAR && forge script script/Contract.s.sol -vvvvv
+true
+false
 I am a string
-[⠢] Compiling...
+[⠆] Compiling...
 No files changed, compilation skipped
 Traces:
   [98] ContractScript::setUp()
