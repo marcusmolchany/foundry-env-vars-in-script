@@ -13,3 +13,28 @@ The following script will:
 ```sh
 $ source .env.local && echo $STRING_ENV_VAR && forge script script/Contract.s.sol -vvvvv
 ```
+
+## ⚠️ This is what I am getting when I run the script:
+
+```sh
+➜  env-vars-in-script git:(main) source .env.local && echo $STRING_ENV_VAR && forge script script/Contract.s.sol -vvvvv
+I am a string
+[⠢] Compiling...
+No files changed, compilation skipped
+Traces:
+  [98] ContractScript::setUp()
+    └─ ← ()
+
+  [2944] ContractScript::run()
+    ├─ [0] VM::envBool("BOOL_ENV_VAR")
+    │   └─ ← "environment variable not found"
+    └─ ← "environment variable not found"
+
+
+Script failed.
+Gas used: 2944
+
+== Return ==
+Error:
+Script failed.
+```
