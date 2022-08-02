@@ -40,3 +40,10 @@ Gas used: 2944
 Error:
 Script failed.
 ```
+
+### forge version
+
+```sh
+➜  env-vars-in-script git:(main) forge --version
+forge 0.2.0 (9ed1c37 2022-08-01T00:09:10.803586Z)
+```
