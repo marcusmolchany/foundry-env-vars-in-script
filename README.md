@@ -1,6 +1,6 @@
 # foundry-env-vars-in-script
 
-testing foundry/forge loading bash env vars into script using environment cheats
+testing foundry/forge loading bash env vars into script using [environment cheats](https://book.getfoundry.sh/cheatcodes/external)
 
 ## run the script
 
